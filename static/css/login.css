@@ -1,0 +1,10 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+.account-pages { padding-top:80px !important; }
+.account-pages .shadow{ box-shadow: -2px -2px 9px #d4d4d4, 0px 0px 0px #ffffff !important;}
+.account-pages .img{ max-height: 30px !important; margin-bottom:10px;}
+.account-pages .box{ max-width:400px !important; margin:0 auto;}

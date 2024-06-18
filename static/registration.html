@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" >
+  <script src="https://itio.in/neobank/assets/libs/simplebar/simplebar.min.js"></script>
+  <link href="https://itio.in/neobank/common/css/form-bg.css" rel="stylesheet">
+  <link   href="https://itio.in/neobank/common/css/template.css" rel="stylesheet">
+ 
+  </head>
+<body>
+  <div class="container"><img class="background" src="https://itio.in/neobank/images/bg-one.jpg"/>
+    <p class="message"> Neo Bank</p>
+    
+  <div class="account-pages">
+    
+      <!-- end row -->
+      <div class="row justify-content-center text-white">
+        <div class="col-lg-12 box position-absolute">
+      <div class="text-center text-white my-2 "><img src="https://itio.in/images/215792616_ITIO%20LOGO%20_general%20BLACK%20ICON-01-min.PNG" alt="Logo" class="img-fluid img "></div>
+          <div class="card form bg-transparent shadow" >
+            <div class="card-body">
+              <h1 class="mb-2 text-center"> Registration </h1>
+              {{if .Message}}
+              <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                <strong>{{.Message}}</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
+              {{end}}
+                      
+                        <form method="post"  action="/registrationPost" class="form-horizontal mt-3">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="row">
+                    <div class="col-md-12  my-1">
+                      <label for="adminId">Name</label>
+                        <input type="text" class="form-control username" id="name" name="name" placeholder="Your Full Name" value=""  autocomplete="off" required>
+                        
+                      
+                    </div>
+                    <div class="col-md-12 my-1">
+                      <label for="userpassword">Email address</label>
+                        <input type="email" class="form-control password" id="email" name="email" value="" placeholder="Enter Email address"  required  autocomplete="off" >
+                        
+                     
+                    </div>
+                                    </div>
+                  <div class=" my-2 text-center">
+                    <button class="btn btn-primary template w-100 login_account" type="submit"  name="btn_submit"> Register </button>
+                  </div>
+                </div>
+                <div class="col"><a href="/login" class="text-light" title="Click for sign up new user" ><i class="fa-solid fa-user-tie fa-fw" ></i> Return to sign in</a></div>
+                </div>
+              </div>
+        
+            </form>
+            <!-- <div class="row">
+              {{if .Email}}
+            <div class="col-md-6 text-center">Email : {{.Email}}</div>
+            {{end}}
+            {{if .Contact}}
+            <div class="col-md-6 text-center">Contact Us : {{.Contact}}</div>
+            {{end}}
+            </div> -->
+          </div>
+          
+        </div>
+      
+      <!-- end Account pages -->
+  <div class="toast-container position-fixed bottom-50 start11-50 translate-middle55">
+    <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header"> <i class="fa-solid fa-headset fa-fw text-success"></i> <strong class="me-auto">&nbsp;Support Team</strong> <small>24x7</small>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body">
+        <div><span><i class="fa-solid fa-envelope"></i>
+          vikashg@bigit.io        </span>&nbsp;&nbsp;<span><i class="fa-solid fa-phone"></i>
+          +41 41 508 76 15        </span></div>
+      </div>
+    </div>
+  </div>
+      </div>
+      
+    </div>
+   
+  
+  </div>
+
+  <!-- Bootstrap JS (Optional) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+   
+
+</body>
+</html>
